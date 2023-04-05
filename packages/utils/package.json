@@ -11,7 +11,8 @@
     "clean": "rimraf -rf ./dist",
     "compile": "tsc -p tsconfig.build.json",
     "prepublishOnly": "yarn run build",
-    "test": "yarn run build"
+    "test": "yarn run build",
+    "ts-check": "tsc --noEmit"
   },
   "devDependencies": {
     "rimraf": "~3.0.2",

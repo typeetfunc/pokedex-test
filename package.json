@@ -9,6 +9,7 @@
     "dev": "lerna run dev --scope=@pokedex/pokedex",
     "clean": "lerna run clean",
     "build": "lerna run build",
+    "ts-check": "lerna run ts-check",
     "pub": "lerna publish",
     "test": "lerna run test",
     "lint": "eslint --ext js,ts,tsx .",

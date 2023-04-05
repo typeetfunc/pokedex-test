@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "test": "yarn run build"
+    "test": "yarn run build",
+    "ts-check": "tsc --noEmit"
   },
   "dependencies": {
     "@next/font": "13.1.4",
