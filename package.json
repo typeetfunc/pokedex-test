@@ -2,18 +2,23 @@
   "name": "root",
   "description": "PokeDex's root",
   "private": true,
+  "license": "ISC",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "dev": "lerna run dev --scope=@pokedex/pokedex",
+    "pokedex:dev": "lerna run dev --scope=@pokedex/pokedex",
+    "pokedex:start": "lerna run start --scope=@pokedex/pokedex",
+    "components:storybook": "lerna run storybook --scope=@pokedex/components",
     "clean": "lerna run clean",
     "build": "lerna run build",
     "ts-check": "lerna run ts-check",
     "pub": "lerna publish",
     "test": "lerna run test",
     "lint": "eslint --ext js,ts,tsx .",
-    "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|json)\" --write"
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|json)\" --write",
+    "docker:build": "docker build --platform linux/amd64 -t pokedex .",
+    "docker:run": "docker run -p 3000:3000 --platform linux/amd64 pokedex"
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",

@@ -2,8 +2,8 @@ import React, { useCallback } from "react";
 import { DataGrid, GridColDef, GridRowParams } from "@mui/x-data-grid";
 import { PaginationModel, Pokemon, isString } from "@pokedex/utils";
 
-export type PokemonsGridProps = {
-  pokemons?: Pokemon[];
+export type PokemonGridProps = {
+  pokemons?: Pick<Pokemon, "name">[];
   paginationModel: PaginationModel;
   loading: boolean;
   total?: number;
@@ -20,7 +20,7 @@ export const PokemonGrid = ({
   onPokemonClick,
   paginationModel,
   onPaginationModelChange,
-}: PokemonsGridProps) => {
+}: PokemonGridProps) => {
   const handleClick = useCallback((val: GridRowParams) => {
     const id = isString(val.id) ? val.id : val.id.toString();
 

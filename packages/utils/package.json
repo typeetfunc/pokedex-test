@@ -1,6 +1,7 @@
 {
   "name": "@pokedex/utils",
   "version": "1.0.0",
+  "license": "ISC",
   "main": "dist/index",
   "types": "dist/index",
   "files": [

@@ -2,11 +2,14 @@
   "name": "@pokedex/pokedex",
   "private": true,
   "version": "1.0.0",
+  "license": "ISC",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "test": "yarn run build",
-    "ts-check": "tsc --noEmit"
+    "ts-check": "tsc --noEmit",
+    "start": "next start",
+    "lint": "next lint --fix"
   },
   "dependencies": {
     "@next/font": "13.1.4",
