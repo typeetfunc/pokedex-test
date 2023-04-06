@@ -9,6 +9,7 @@ Project builded by:
  - next.js
  - typescript
  - storybook
+ - node
 
 Project uses different `tsconfig` for dev and build envs, for better `typescript` code navigation. Inspired by [article](https://medium.com/@NiGhTTraX/how-to-set-up-a-typescript-monorepo-with-lerna-c6acda7d4559) about lerna and typescript caveats.
 
@@ -21,7 +22,9 @@ Project uses different `tsconfig` for dev and build envs, for better `typescript
 
 ## Available Scripts
 
-> Note: Project uses [Yarn](https://yarnpkg.com/getting-started/install). Please, install it before using.
+> Note: Project uses [`yarn`](https://yarnpkg.com/getting-started/install). Please, install it before using.
+
+> Also, Preferably use [`nvm`](https://github.com/nvm-sh/nvm#installing-and-updating). You can setup right version of node run at root of project `nvm use`. Preferably use **node version > 18**.
 
 Before start you need install dependencies by `yarn install`
 
@@ -41,7 +44,10 @@ Builds the app for production to the `dist` folders.
 
 ### `yarn run components:storybook`
 
-Start `storybook` dev server for `components` package
+Start `storybook` dev server for `components` package.
+Open http://localhost:6006 to view it in the browser.
+
+Run only after building all dependenciew by `build` command.
 
 ### `yarn run lint`
 
