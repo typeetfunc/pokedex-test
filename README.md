@@ -1,4 +1,4 @@
-# Marlow PokeDex
+# PokeDex Test App
 
 ## Stack
 
