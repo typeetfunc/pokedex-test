@@ -1,18 +1,15 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper";
 import { INITIAL_GRID_SETTINGS } from "./constants";
+import { PaginationModel } from "@pokedex/utils";
 
 export const pokemonsGridSettingsSlice = createSlice({
   name: "pokemonsGridSettings",
   initialState: INITIAL_GRID_SETTINGS,
   reducers: {
-    setPageSize: (state, action: PayloadAction<number>) => ({
+    setPaginationModel: (state, action: PayloadAction<PaginationModel>) => ({
       ...state,
-      pageSize: action.payload,
-    }),
-    setPage: (state, action: PayloadAction<number>) => ({
-      ...state,
-      page: action.payload,
+      paginationModel: action.payload,
     }),
   },
   extraReducers: {
@@ -25,4 +22,4 @@ export const pokemonsGridSettingsSlice = createSlice({
   },
 });
 
-export const { setPage, setPageSize } = pokemonsGridSettingsSlice.actions;
+export const { setPaginationModel } = pokemonsGridSettingsSlice.actions;

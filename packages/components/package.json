@@ -12,14 +12,16 @@
     "ts-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "react": "18.2.0"
+    "react": "^18.2.0",
+    "@mui/x-data-grid": "^6.0.4",
+    "@mui/material": "^5.11.5"
   },
   "dependencies": {
-    "@pokedex/utils": "*",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@pokedex/utils": "*"
   },
   "devDependencies": {
-    "@types/react": "18.0.0"
+    "@types/react": "18.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }

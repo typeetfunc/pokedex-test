@@ -1,1 +1,2 @@
-export const meaningOfLife = 42;
+export * from "./types";
+export * from "./stringUtils";

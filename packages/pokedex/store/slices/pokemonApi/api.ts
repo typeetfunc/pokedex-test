@@ -1,8 +1,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
 import { HYDRATE } from "next-redux-wrapper";
 
-import { PokemonDetails, PokemonEntityListApiRequest, PokemonEntityListApiResponse } from "./types";
+import {
+  PokemonEntityListApiRequest,
+  PokemonEntityListApiResponse,
+} from "./types";
 import { BASE_URL, POKEMON_ENDPOINT } from "./constants";
+import { PokemonDetails } from "@pokedex/utils";
 
 export const pokemonApi = createApi({
   reducerPath: "pokemonApi",
@@ -16,8 +20,12 @@ export const pokemonApi = createApi({
     getPokemonByName: builder.query<PokemonDetails, string>({
       query: (name) => `/${POKEMON_ENDPOINT}/${name}`,
     }),
-    getPokemons: builder.query<PokemonEntityListApiResponse, PokemonEntityListApiRequest>({
-      query: (params) => `/${POKEMON_ENDPOINT}?offset=${params.offset}&limit=${params.limit}`,
+    getPokemons: builder.query<
+      PokemonEntityListApiResponse,
+      PokemonEntityListApiRequest
+    >({
+      query: (params) =>
+        `/${POKEMON_ENDPOINT}?offset=${params.offset}&limit=${params.limit}`,
     }),
   }),
 });

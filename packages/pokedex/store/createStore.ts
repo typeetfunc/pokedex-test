@@ -9,5 +9,6 @@ export const createStore = () =>
       [pokemonApi.reducerPath]: pokemonApi.reducer,
       pokemonsGridSettings: pokemonsGridSettingsSlice.reducer,
     },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(pokemonApi.middleware),
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(pokemonApi.middleware),
   });
